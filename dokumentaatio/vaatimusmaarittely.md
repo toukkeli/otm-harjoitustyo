@@ -1,61 +1,37 @@
 # Vaatimusmäärittely
 
+
+Huomio! Muutettu 10.4 koska alkuperäinen aihe ei vastannut [työn aloittamiseen](https://github.com/mluukkai/otm-2018/blob/master/web/tyon_aloitus.md#harjoitusty%C3%B6n-aloitus) liittyviä suosituksia
+
 ## Sovelluksen tarkoitus
 
-Sovelluksen tarkoitus on toimia alustana pöytäroolipelikamppanioiden hallintaan, jakamiseen ja arkistoimiseen.
+Sovellus on pienimuotoinen seikkailuroolipeli samaan tapaan kuin [Nethack](https://fi.wikipedia.org/wiki/NetHack)
 
-Tavallinen käyttäjä voi kirjauduttuaan luoda uuden kamppanian, selata muita sovellukseen tallennettuja pelejä ja liittyä pelaajaksi avoimiin peleihin.
-
-Sovelluksen on tarkoitus hyödyntää HTML:lää, ja se pitäisi olla teoriassa mahdollista siirtää nettiin
-
-## Käyttäjät
-
-Sovellukseen tulee useita _peruskäyttäjiä_, joilla jokaisella on samat oikeudet.
-
-Jonkinlainen Admin-käyttäjätunnus, jolla on oikeudet muokata kaikkea sisältöä olisi hyvä luoda julkista käyttöä varten.
+Pelissä pelaaja ohjaa hahmoa ruudutetulla kartalla luolastossa, jossa on erilaisia hirviöitä.
 
 ## Perusversion tarjoama toiminnallisuus
 
-### Ennen kirjautumista
+### Alkuvalikko
+- Käyttäjä voi aloittaa uuden pelin
+- Käyttäjä voi lopettaa pelin
 
-- käyttäjä voi luoda järjestelmään käyttäjätunnuksen
-  - käyttäjätunnuksen täytyy olla uniikki ja pituudeltaan vähintään 3 merkkiä
-  - luonnin yhteydessä annetaan salasana, joka liitetään käyttäjätunnukseen
+### Pelinäkymä
 
-- käyttäjä voi kirjautua järjestelmään
-  - kirjautuminen onnistuu syötettäessä olemassaoleva käyttäjätunnus ja salasana kirjautumislomakkeelle
-  - jos käyttäjää ei olemassa, ilmoittaa järjestelmä tästä
-  - Jos käyttäjä on olemassa, mutta salasana ei täsmää, ilmoittaa järjestelmä tästä
+- Pelaaja voi poistua aloitusnäkymään painamalla ESC
 
-### Kirjautumisen jälkeen / kampanialista
+- Peliruudulla näkyy:
+  - Pelaajahahmo
+  - Seiniä
+  - Hirviöitä
+  - Ruudun alareunassa pelaajan status (HP)
 
-- Käyttäjä näkee listan kampanioita ja niitten lyhytkuvauksia
-  - Käyttäjän omat kampaniat listan alussa
-  - Käyttäjä voi valita listasta kampanian ja päästä sen kampaniasivulle
-
-- käyttäjä voi luoda uuden kampanian
-  - Luotaessa kampanialle annetaan nimi
-  - luotu kampania ilmestyy näkyviin kaikkien käyttäjien listoihin
-
-- käyttäjä voi kirjautua ulos järjestelmästä
-
-### Kampaniasivu - Yleinen
-
-- Käyttäjä näkee sivulla pelin kuvauksen
-  - Kuvaus tekstimuotoinen
-
-- Käyttäjä voi palata takaisin listanäkymään
-
-### Kampaniasivu - Oma
-
-- Mikäli käyttäjä siirtyi oman kampaniansa näkymään, hän voi muokata sitä
-  - Pelin kuvauksen tilalla tekstikenttä jossa kuvausta voi muokata
-
-- Käyttäjä voi nyt myös poistaa pelin jolloin se häviää kaikista listauksista
+- Pelihahmoa voi liikuttaa ruudukolla kahdeksaan suuntaan numpadilla
+  - Kun pelaaja liikkuu askeleen, niin hirviötkin liikkuvat askeleen suoraan pelaajaa kohti jos tilaa riittää
+  - Jos pelaaja tai hirviö liikkuu ruutuun jossa toinen on, lyö liikkuja toista ja tapahtuu vahinkoa
 
 ## Jatkokehitysideoita
 
-Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla
-
-- Kampanialla voisi olla yhden kuvauksen sijasta useita eri muokattavia tietoja, kuten nimi, luontipäivä, pelinjohtajan tiedot, pelinjohtajan yhteystiedot, genre, jne.
+- Pelaajalla ja hirviöillä on ominaisuuksia jotka vaikuttavat siihen, miten vahinkoa otetaan ja jaetaan
+- Pelaajalla ja hirviöillä on muitakin asioita tehtävänä kuin liikkuminen ja lyöminen
+- Peliruudulla on esineitä joita voi poimia jotka päivittävät pelaajaa
 

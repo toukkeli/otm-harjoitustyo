@@ -1,8 +1,9 @@
-# Markdown notaatiota
+# Roolipeliprojekti OTM-kurssille
 
-**Kappas kehveliä** kun on tyylikästä.
+Harjoitustyö OTM-kurssille. Tavoitteena on tehdä pienimuotoinen luolastoseikkailu.
 
-* Tehty otm-kurssia varten
-* Oon tainnut tietämättäni osata käyttää jo pitkään
+## Dokumentaatio
 
-Tässä linkki asiaankuulumattomaan [sisältöön!](https://globalgamejam.org/2018/games/make-noise)
+[Vaatimusmäärittely](https://github.com/toukkeli/otm-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
+[Tuntikirjanpito](https://github.com/toukkeli/otm-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
