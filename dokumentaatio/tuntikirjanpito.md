@@ -6,4 +6,4 @@
 | 27.3. | 1    | Aiheen valinta, Alustava määrittelydokumentti|
 | 10.4. | 3   | Aiheen muutos, harjoitustyö vaihe 3 toteutus|
 
-| yht   | 1.5  | | 
+| 10.4. | 7   | Projektin jatko, luokkakaavio, testausta, Checkstyle ei toimi || yht   | 1.5  | | 

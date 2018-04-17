@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package th.roguelike;
+package roguelike.domain;
 
 /**
  *
  * @author toukk
- * 
- * 
+ *
+ *
  * Tyyppi sisältää kaikki mahdollisuudet siitä mitä ruudussa voi olla
- * 
- * Ratkaisu on vielä esimerkkityyppinen. Tulevaisuudessa pelaaja ja vastustajat toteutetaan muuten kuin enumeraattorilla
+ *
+ * Ratkaisu on vielä esimerkkityyppinen. Tulevaisuudessa pelaaja ja vastustajat
+ * toteutetaan muuten kuin enumeraattorilla
  */
 
-
-public enum Tyyppi {
-    PELAAJA, ÖRKKI, SEINÄ, TYHJÄ;
+public enum Ruututyyppi {
+    SEINÄ, LATTIA;
 }

@@ -1,0 +1,1 @@
+<img src="https://github.com/toukkeli/otm-harjoitustyo/blob/master/web/images/Luokkakaavio.xml" width="160">

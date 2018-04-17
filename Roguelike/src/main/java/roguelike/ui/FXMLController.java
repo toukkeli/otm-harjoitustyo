@@ -1,4 +1,4 @@
-package th.roguelike;
+package roguelike.ui;
 
 import java.net.URL;
 import java.util.ResourceBundle;
