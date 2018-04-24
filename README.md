@@ -1,4 +1,4 @@
-# Roolipeliprojekti OTM-kurssille
+﻿# Roolipeliprojekti OTM-kurssille
 
 Harjoitustyö OTM-kurssille. Tavoitteena on tehdä pienimuotoinen luolastoseikkailu.
 
@@ -10,3 +10,5 @@ Harjoitustyö OTM-kurssille. Tavoitteena on tehdä pienimuotoinen luolastoseikka
 
 
 [Arkkitehtuurikuvaus](https://github.com/toukkeli/otm-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
+[Uusin Release](https://github.com/toukkeli/otm-harjoitustyo/releases/tag/viikko5)

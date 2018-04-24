@@ -16,6 +16,7 @@ public class Roguelike {
     public Roguelike(){
         this.kartta = new Grid(10,10);
         this.pelaaja = new Pelaaja(4,4);
+        this.kartta.setHahmo(pelaaja, pelaaja.getX(), pelaaja.getY());
     }
     
     public Roguelike(Grid kartta, int x, int y){
@@ -39,7 +40,14 @@ public class Roguelike {
         int y = getPelaaja().getY();
         Ruutu lahtoruutu = getGrid().getRuutu(x, y);
         Ruutu kohderuutu = getGrid().getRuutu(x +xMuutos, y + yMuutos);
-        return kartta.moveHahmo(lahtoruutu, kohderuutu);
+        if(kartta.moveHahmo(lahtoruutu, kohderuutu)){
+            pelaaja.setX(x + xMuutos);
+            pelaaja.setY(y + yMuutos);
+            return true;
+        }else{
+            return false;
+        }
+        
     }
     
     /*public Boolean liikutaHahmoa(Hahmo hahmo, int xMuutos, int yMuutos){

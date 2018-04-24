@@ -9,20 +9,20 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import roguelike.domain.Roguelike;
 
-public class MainApp extends Application {
+public class MainApp /*extends Application*/ {
 
-    @Override
+    /* @Override
     public void start(Stage stage) throws Exception {
-        /*Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
 
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
 
         stage.setTitle("JavaFX and Maven");
         stage.setScene(scene);
-        stage.show();*/
-    }
-
+        stage.show();
+    
+    }*/
     /**
      * The main() method is ignored in correctly deployed JavaFX application.
      * main() serves only as fallback in case the application can not be

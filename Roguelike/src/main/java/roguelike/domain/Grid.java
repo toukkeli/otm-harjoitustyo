@@ -65,7 +65,7 @@ public class Grid {
 
     // Palauttaa true jos siirto onnistui, false jos ei
     public boolean moveHahmo(Ruutu lahtoruutu, Ruutu kohderuutu) {
-        if (lahtoruutu.containsHahmo() || kohderuutu.getRuutu().equals(Ruututyyppi.SEINÄ) || kohderuutu.containsHahmo()) {
+        if (!(lahtoruutu.containsHahmo()) || kohderuutu.getRuutu().equals(Ruututyyppi.SEINÄ) || kohderuutu.containsHahmo()) {
             return false;
         } else {
             Hahmo hahmo = lahtoruutu.getHahmo();
