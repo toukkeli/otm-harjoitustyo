@@ -6,12 +6,10 @@
 package roguelike.domain;
 
 /**
- * Luolastosta löytyvää oliota kuvaava yläluokka. Ei sisällä vielä mitään koska
- * hahmoille ei ole vielä implementoitu statteja
- *
+ * Geneerista vihollista kuvaava luokka. Ei sisällä vielä mitään koska hahmoille
+ * ei ole vielä implementoitu statteja
  * @author toukk
  */
-public abstract class Hahmo {
-
-    // Tänne tulee hahmojen perusjuttuja kunhan aika on
+public class Vihollinen extends Hahmo {
+    
 }

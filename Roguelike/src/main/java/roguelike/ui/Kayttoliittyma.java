@@ -26,7 +26,7 @@ public class Kayttoliittyma {
 
     public void kaynnista() {
         while (true) {
-            
+
             Boolean endgame = false;
             tulostaPeliruutu();
             System.out.println("Siirretäänkö pelaajaa oikealle(o), ylös(y), vasemmalle (v), alas (a) vai lopetetaanko peli(muu komento)?");
@@ -68,7 +68,11 @@ public class Kayttoliittyma {
 
             }
 
-            if(endgame) break;
+            if (endgame) {
+                break;
+            }
+
+            peli.liikutaVihollisia();
         }
 
     }
@@ -80,7 +84,12 @@ public class Kayttoliittyma {
             int x;
             for (x = 0; x < kartta.getLeveys(); x++) {
                 if (kartta.getRuutu(x, y).containsHahmo()) {
-                    System.out.print("@");
+                    if (kartta.getRuutu(x, y).getHahmo().equals(this.peli.getPelaaja())) {
+                        System.out.print("@");
+                    } else {
+                        System.out.print("X");
+                    }
+
                 } else {
                     Ruututyyppi maasto = kartta.getRuutu(x, y).getRuutu();
                     if (maasto == Ruututyyppi.SEINÄ) {

@@ -6,7 +6,12 @@
 package roguelike.domain;
 
 /**
+ * Pelaaja kuvaa pelaajan kontrolloimaa hahmoa. Luokka on varsin tynkä koska
+ * statteja ei vielä ole. Pelaaja muistaa koordinaattinsa Roguelike-luokan
+ * tarpeisiin
  *
+ * @see Roguelike
+ * @see Hahmo
  * @author toukk
  */
 public class Pelaaja extends Hahmo {

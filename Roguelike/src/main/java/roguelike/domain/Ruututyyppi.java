@@ -10,12 +10,12 @@ package roguelike.domain;
  * @author toukk
  *
  *
- * Tyyppi sisältää kaikki mahdollisuudet siitä mitä ruudussa voi olla
+ * Tyyppi sisältää kaikki mahdollisuudet siitä mitä ruudussa voi olla (seinä,
+ * lattia) , lukuunottamatta hahmoja.
  *
- * Ratkaisu on vielä esimerkkityyppinen. Tulevaisuudessa pelaaja ja vastustajat
- * toteutetaan muuten kuin enumeraattorilla
+ * @see Hahmo
+ *
  */
-
 public enum Ruututyyppi {
     SEINÄ, LATTIA;
 }

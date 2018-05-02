@@ -5,7 +5,11 @@
  */
 package roguelike.domain;
 
+import java.awt.Polygon;
+
 /**
+ * Ruutu-olio sisältää tiedon sekä ruudun tyypistä (lattia tai seinä) sekä
+ * ruudussa mahdollisesti olevasta hahmosta
  *
  * @author toukk
  */
@@ -25,7 +29,6 @@ public class Ruutu {
         this.hahmo = hahmo;
     }
 
-    // Tämän voisi nimetä paremmin?
     public Ruututyyppi getRuutu() {
         return this.ruutu;
     }
@@ -34,7 +37,6 @@ public class Ruutu {
         return this.hahmo;
     }
 
-    // Tämän voisi nimetä paremmin?
     public void setRuutu(Ruututyyppi ruutu) {
         this.ruutu = ruutu;
     }
@@ -43,11 +45,25 @@ public class Ruutu {
         this.hahmo = hahmo;
     }
 
+    /**
+     * Palauttaa tiedon siita onko ruudussa jotain hahmoa vai ei
+     *
+     * @return Onko ruudussa hahmo
+     */
     public boolean containsHahmo() {
-        if (this.hahmo == null) {
-            return false;
-        } else {
-            return true;
-        }
+        return this.hahmo != null;
     }
+
+    /*public Polygon getKuva() {
+        if (this.containsHahmo()) {
+            return this.getHahmo().getKuva();
+        } else {
+            if (this.ruutu == Ruututyyppi.SEINÄ) {
+                Polygon kuva = new Polygon(0,0,10,10);
+                return 
+            } else {
+
+            } 
+        }
+    }*/
 }
