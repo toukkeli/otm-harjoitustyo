@@ -6,7 +6,6 @@
 package roguelike.domain;
 
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Polygon;
 
 /**
  * Geneerista vihollista kuvaava luokka. Ei sisällä vielä mitään koska hahmoille

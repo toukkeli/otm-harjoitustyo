@@ -6,7 +6,6 @@
 package roguelike.domain;
 
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Polygon;
 
 /**
  *
@@ -24,7 +23,7 @@ public enum Ruututyyppi {
     LATTIA(Color.BROWN),
     PORTAAT(Color.DARKGRAY);
     
-    private Color vari;
+    private final Color vari;
     public Color getVari(){
         return this.vari;
     }

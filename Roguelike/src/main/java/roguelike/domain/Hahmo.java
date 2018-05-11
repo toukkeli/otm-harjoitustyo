@@ -31,7 +31,6 @@ public abstract class Hahmo {
         this.kuva = new Polygon(10, 0, 20, 10, 10, 20, 0, 10);
         this.y = y;
         this.x = x;
-        this.nimi = nimi;
 
         this.maxhp = 1;
         this.hp = 1;

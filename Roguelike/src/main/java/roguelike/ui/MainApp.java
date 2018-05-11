@@ -1,9 +1,7 @@
 package roguelike.ui;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -35,7 +33,7 @@ public class MainApp extends Application {
                 + "\n Liikuta pelaaja numpadilla (tai nuolinäppäimillä)."
                 + "\n Muut vinoneliöt ovat vihollisia, joita voi lyödä niitä päin kävelemällä."
                 + "\n Onnea matkaan, seikkailija!");
-        
+
         tekstikentta.setEditable(false);
         tekstikentta.setMouseTransparent(true);
         tekstikentta.setFocusTraversable(false);
@@ -51,44 +49,44 @@ public class MainApp extends Application {
                 TextArea a = tekstikentta;
                 List<String> tulostettavat = new ArrayList<>();
                 tyhjennaKommentit(tekstikentta);
-                tulostaKommentti(peli.pelaajanStatsit(),tekstikentta);
+                tulostaKommentti(peli.pelaajanStatsit(), tekstikentta);
                 if (event.getCode() == KeyCode.NUMPAD1) {
                     tulostaKommentti(peli.liikutaPelaajaa(-1, 1), a);
                     tulostettavat = peli.paivita();
                     Paivita(peli, Asettelu, tulostettavat);
                 };
                 if (event.getCode() == KeyCode.NUMPAD2 || event.getCode() == KeyCode.DOWN) {
-                    tulostaKommentti(peli.liikutaPelaajaa(0, 1),a);
+                    tulostaKommentti(peli.liikutaPelaajaa(0, 1), a);
                     tulostettavat = peli.paivita();
                     Paivita(peli, Asettelu, tulostettavat);
                 };
                 if (event.getCode() == KeyCode.NUMPAD3) {
-                    tulostaKommentti(peli.liikutaPelaajaa(1, 1),a);
+                    tulostaKommentti(peli.liikutaPelaajaa(1, 1), a);
                     tulostettavat = peli.paivita();
                     Paivita(peli, Asettelu, tulostettavat);
                 };
                 if (event.getCode() == KeyCode.NUMPAD6 || event.getCode() == KeyCode.RIGHT) {
-                    tulostaKommentti(peli.liikutaPelaajaa(1, 0),a);
+                    tulostaKommentti(peli.liikutaPelaajaa(1, 0), a);
                     tulostettavat = peli.paivita();
                     Paivita(peli, Asettelu, tulostettavat);
                 };
                 if (event.getCode() == KeyCode.NUMPAD9) {
-                    tulostaKommentti(peli.liikutaPelaajaa(1, -1),a);
+                    tulostaKommentti(peli.liikutaPelaajaa(1, -1), a);
                     tulostettavat = peli.paivita();
                     Paivita(peli, Asettelu, tulostettavat);
                 };
                 if (event.getCode() == KeyCode.NUMPAD8 || event.getCode() == KeyCode.UP) {
-                    tulostaKommentti(peli.liikutaPelaajaa(0, -1),a);
+                    tulostaKommentti(peli.liikutaPelaajaa(0, -1), a);
                     tulostettavat = peli.paivita();
                     Paivita(peli, Asettelu, tulostettavat);
                 };
                 if (event.getCode() == KeyCode.NUMPAD7) {
-                    tulostaKommentti(peli.liikutaPelaajaa(-1, -1),a);
+                    tulostaKommentti(peli.liikutaPelaajaa(-1, -1), a);
                     tulostettavat = peli.paivita();
                     Paivita(peli, Asettelu, tulostettavat);
                 };
                 if (event.getCode() == KeyCode.NUMPAD4 || event.getCode() == KeyCode.LEFT) {
-                    tulostaKommentti(peli.liikutaPelaajaa(-1, 0),a);
+                    tulostaKommentti(peli.liikutaPelaajaa(-1, 0), a);
                     tulostettavat = peli.paivita();
                     Paivita(peli, Asettelu, tulostettavat);
                 };
@@ -135,10 +133,10 @@ public class MainApp extends Application {
     }
 
     public void tulostaKommentti(String mita, TextArea tekstikentta) {
-        tekstikentta.setText(tekstikentta.getText() + "\n"+ mita);
+        tekstikentta.setText(tekstikentta.getText() + "\n" + mita);
     }
-    
-    public void tyhjennaKommentit(TextArea tekstikentta){
+
+    public void tyhjennaKommentit(TextArea tekstikentta) {
         tekstikentta.setText("");
     }
 

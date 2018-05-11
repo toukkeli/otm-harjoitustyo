@@ -31,9 +31,9 @@ import roguelike.dao.VihollinenDao;
 public class Map {
 
     private List<List<Ruutu>> koordinaatisto;
-    private Database tietokanta;
-    private Pelaaja pelaaja;
-    private ArrayList<Vihollinen> viholliset;
+    private final Database tietokanta;
+    private final Pelaaja pelaaja;
+    private final ArrayList<Vihollinen> viholliset;
     private boolean havitty;
 
     public Map(Database tietokanta) {
@@ -115,7 +115,7 @@ public class Map {
             lahtoruutu.setHahmo(null);
             hahmo.setX(x);
             hahmo.setY(y);
-            return hahmo.getNimi() + "liikkui";
+            return hahmo.getNimi() + " liikkui";
         }
     }
 
@@ -152,7 +152,7 @@ public class Map {
             kommentit.add(seuraavaTaso());
             kommentit.addAll(liikutaVihollisia());
         }
-        
+
         return kommentit;
     }
 
@@ -241,7 +241,7 @@ public class Map {
 
             rx = satunnainen.nextInt(leveys);
             ry = satunnainen.nextInt(korkeus);
-            if (getRuutu(rx, ry).getRuutu().equals(Ruututyyppi.SEINÄ)|| getRuutu(rx,ry).containsHahmo() ) {
+            if (getRuutu(rx, ry).getRuutu().equals(Ruututyyppi.SEINÄ) || getRuutu(rx, ry).containsHahmo()) {
                 j--;
             } else {
                 lisaaSatunnainenVihollinen(rx, ry);
@@ -264,21 +264,6 @@ public class Map {
                 i--;
             }
         }
-    }
-
-    private void lisaaTiettyVihollinen(String nimi, int x, int y) {
-        VihollinenDao dao = new VihollinenDao(tietokanta);
-        try {
-            Vihollinen vihollinen = dao.findOne(nimi);
-            vihollinen.setX(x);
-            vihollinen.setY(y);
-            getRuutu(x, y).setHahmo(vihollinen);
-            viholliset.add(vihollinen);
-
-        } catch (SQLException ex) {
-            Logger.getLogger(Map.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
     }
 
     private void lisaaSatunnainenVihollinen(int x, int y) {
@@ -313,13 +298,14 @@ public class Map {
 
         if (this.getRuutu(x, y).getRuutu().equals(Ruututyyppi.PORTAAT)) {
             this.getPelaaja().levelUp();
+            this.viholliset.clear();
             uusiTaso(this.getLeveys(), this.getKorkeus(), 70, this.getPelaaja().getLevel());
             return "Syvemmälle vain! Laskeudutaan uudelle tasolle.";
         }
         return "";
     }
-    
-    public String pelaajanStatsit(){
+
+    public String pelaajanStatsit() {
         return this.getPelaaja().status();
     }
 }
