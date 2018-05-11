@@ -5,6 +5,9 @@
  */
 package roguelike.domain;
 
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Polygon;
+
 /**
  * Pelaaja kuvaa pelaajan kontrolloimaa hahmoa. Luokka on varsin tynkä koska
  * statteja ei vielä ole. Pelaaja muistaa koordinaattinsa Roguelike-luokan
@@ -16,29 +19,33 @@ package roguelike.domain;
  */
 public class Pelaaja extends Hahmo {
 
-    private int x;
-    private int y;
+    private int level;
 
     public Pelaaja(int x, int y) {
-        this.x = x;
-        this.y = y;
+        super(x, y);
+        this.getKuva().setFill(Color.AQUA);
+        setDmg(1);
+        setAcc(100);
+        setHp(30);
+        setMaxhp(30);
+        setNimi("Pelaaja");
+        this.level = 1;
     }
 
-    // Tänne tulee pelaajan perusjuttuja kunhan aika on
-    public int getX() {
-        return this.x;
+    public int getLevel() {
+        return this.level;
+                
     }
-
-    public int getY() {
-        return this.y;
+    
+    public void setLevel(int level){
+        this.level = level;
     }
-
-    public void setX(int newX) {
-        this.x = newX;
+    
+    public void levelUp(){
+        this.level = this.level + 1;
     }
-
-    public void setY(int newY) {
-        this.y = newY;
+    
+    public String status(){
+        return "HP: " +getHp() +"/"+getMaxhp()+" : DMG: " + this.getDmg() + " : ACC: "+ getAcc();
     }
-
 }

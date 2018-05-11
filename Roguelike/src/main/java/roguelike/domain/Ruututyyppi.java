@@ -5,6 +5,9 @@
  */
 package roguelike.domain;
 
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Polygon;
+
 /**
  *
  * @author toukk
@@ -17,5 +20,18 @@ package roguelike.domain;
  *
  */
 public enum Ruututyyppi {
-    SEINÄ, LATTIA;
+    SEINÄ(Color.GRAY),
+    LATTIA(Color.BROWN),
+    PORTAAT(Color.DARKGRAY);
+    
+    private Color vari;
+    public Color getVari(){
+        return this.vari;
+    }
+    
+    Ruututyyppi(Color vari){
+        this.vari = vari;
+    }
+    
+    
 }

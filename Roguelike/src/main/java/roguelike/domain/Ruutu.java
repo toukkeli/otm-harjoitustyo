@@ -5,7 +5,8 @@
  */
 package roguelike.domain;
 
-import java.awt.Polygon;
+import javafx.scene.shape.Polygon;
+
 
 /**
  * Ruutu-olio sisältää tiedon sekä ruudun tyypistä (lattia tai seinä) sekä
@@ -54,16 +55,14 @@ public class Ruutu {
         return this.hahmo != null;
     }
 
-    /*public Polygon getKuva() {
+    public Polygon getKuva() {
+        Polygon kuva;
         if (this.containsHahmo()) {
-            return this.getHahmo().getKuva();
+            kuva = this.getHahmo().getKuva();
         } else {
-            if (this.ruutu == Ruututyyppi.SEINÄ) {
-                Polygon kuva = new Polygon(0,0,10,10);
-                return 
-            } else {
-
-            } 
+            kuva = new Polygon (0,0,0,20,20,20,20,0);
+            kuva.setFill(this.getRuutu().getVari());
         }
-    }*/
+        return kuva;
+    }
 }
